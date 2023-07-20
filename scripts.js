@@ -4,6 +4,7 @@ const DEFAULT_CANVAS_SIZE = SIZE/DEFAULT_COUNT;
 let color = "#5cad23";
 let rainbow = true;
 let erase = false;
+let originalColor = '#fefefe';
 let currentCount = DEFAULT_COUNT;
 
 const container = document.querySelector('.container');
@@ -32,7 +33,7 @@ function generateCanvas(canvasSize = DEFAULT_COUNT) {
         if (rainbow) {
             cell.style.backgroundColor = getRandomRgb();
         } else if (erase) {
-            cell.style.backgroundColor = '#fefefe';
+            cell.style.backgroundColor = originalColor;
         } else {
             cell.style.backgroundColor = color;
         }
@@ -80,7 +81,10 @@ rainbowButton.addEventListener('click', () => {
 
 const resetButton = document.querySelector('.reset');
 resetButton.addEventListener('click', () => {
-    generateCanvas(currentCount);    
+    generateCanvas(currentCount);  
+    if (erase) {
+        document.querySelector('.rainbow').click();
+    }  
 });
 
 const eraseButton = document.querySelector('.erase');
