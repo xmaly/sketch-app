@@ -1,0 +1,139 @@
+:root {
+    --primary-dark: #262626;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-dark);
+    height: 100vh;
+}
+
+.header {
+    font-weight: 900;
+    font-size: 60px;
+    margin: 40px;
+}
+
+.container {
+    flex-direction: column;
+    background-color: var(--secondary-light);
+    border: 3px solid var(--primary-dark);
+    box-shadow: 0px 0px 8px 0px var(--primary-dark);
+}
+
+.row {
+    display: flex;
+}
+
+.content {
+    display: flex;
+    gap: 75px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type='color'] {
+    --webkit-appearance: none;
+    width: 80px;
+    height: 80px;
+    border: none;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.transition {
+    transition: 0.15s ease-in-out;
+}
+
+input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.range {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rangeValue {
+    margin-bottom: 5px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color: var(--secondary-light);
+    border-radius: 7px;
+    box-shadow: 0px 0px 8px 0px #7b7b7b;
+}
+
+button {
+    font-size: 20px;
+    font-weight: bold;
+    border-style: none  ;
+    background-color: var(--primary-dark);
+    color: var(--secondary-light);
+    border-radius: 5px;
+    padding: 8px 20px;
+    opacity: 75%;
+}
+
+button:hover, input:hover, .clicked {
+    scale: 1.1;
+    opacity: 100%;
+}
+
+.rainbow {
+    color: var(--secondary-light);
+    background-image:     
+        linear-gradient(
+        to right, 
+        #E7484F,
+        #E7484F 16.65%,
+        #F68B1D 16.65%,
+        #F68B1D 33.3%,
+        #ffee00 33.3%,
+        #ffee00 49.95%,
+        #009E4F 49.95%,
+        #009E4F 66.6%,
+        #00AAC3 66.6%,
+        #00AAC3 83.25%,
+        #732982 83.25%,
+        #732982 100%,
+        #E7484F 100%
+    );
+    
+    text-shadow: 0px 0px 5px #2b2b2b;
+}
+
+.footer {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    align-self: stretch;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
