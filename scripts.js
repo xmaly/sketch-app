@@ -23,6 +23,7 @@ function generateCanvas(canvasSize = DEFAULT_COUNT) {
             div.classList.add('cell');
             div.style.height = `${cellSize}px`;
             div.style.width = `${cellSize}px`;
+            div.style.borderRadius = '15%';
             row.appendChild(div);
         }
         container.appendChild(row);
